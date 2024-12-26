@@ -1,0 +1,37 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(
+    to right,
+    #1a1f2e,
+    #2d3548
+  ); /* Horizontal blue gradient */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4da8da; /* Blue text */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #dfe6f1; /* Light blue */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #6db8e4; /* Lighter blue on hover */
+}

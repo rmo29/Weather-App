@@ -1,0 +1,57 @@
+/* Weather Component */
+.weather-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.weather-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ecf0f1; /* Light off-white text */
+}
+
+input {
+  padding: 12px;
+  font-size: 18px;
+  width: 250px;
+  border: 2px solid #1abc9c; /* Electric blue border */
+  border-radius: 5px;
+  background-color: #2c3e50; /* Dark blue background */
+  color: #ecf0f1; /* Light text color */
+  margin-right: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #1abc9c; /* Electric blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #16a085; /* Slightly darker shade of electric blue */
+}
+
+.error-message {
+  color: #e74c3c; /* Red color for errors */
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  font-size: 28px;
+  color: #ecf0f1; /* Light off-white text */
+}
+
+.weather-info p {
+  font-size: 20px;
+  margin: 10px 0;
+}
