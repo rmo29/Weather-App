@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Weather from "./components/Weather";
 import About from "./components/About";
-import Footer from "./components/Footer"; // Import Footer
+import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css"; // Ensure this import is at the top of your file
+import "./App.css";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Weather />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <Footer /> {/* Add Footer here */}
+        <Footer />
       </div>
     </Router>
   );

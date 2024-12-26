@@ -14,21 +14,3 @@
 .footer p {
   margin: 0;
 }
-
-.footer .heart {
-  font-size: 22px;
-  color: #ffffff; /* White color for the heart */
-  animation: beat 1.5s infinite; /* Animation for the heart */
-}
-
-@keyframes beat {
-  0%,
-  100% {
-    transform: scale(1);
-    color: #ffffff; /* White heart */
-  }
-  50% {
-    transform: scale(1.2);
-    color: #000000; /* Black heart */
-  }
-}
