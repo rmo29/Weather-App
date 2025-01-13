@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Weather.css";
 
 const Weather = () => {
@@ -6,14 +6,15 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const getWeatherData = async () => {
-    if (!city) {
+  // Function to fetch weather data
+  const getWeatherData = async (cityName) => {
+    if (!cityName) {
       setErrorMessage("Please enter a city name");
       return;
     }
 
     const apiKey = "c6770102e4285870b0d6b42e63e3bfe1";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
     try {
       const response = await fetch(url);
@@ -32,16 +33,22 @@ const Weather = () => {
     }
   };
 
+  // useEffect to fetch weather data for a default city when the component mounts
+  useEffect(() => {
+    const defaultCity = "Hyderabad";
+    getWeatherData(defaultCity);
+  }, []);
+
   return (
     <div className="weather-container">
-      <h1>Search</h1>
+      <h1>Weather Search</h1>
       <input
         type="text"
         placeholder="Enter city"
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button onClick={getWeatherData}>Get Weather</button>
+      <button onClick={() => getWeatherData(city)}>Get Weather</button>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
